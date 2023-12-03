@@ -1,9 +1,9 @@
 # BenchMarking
 
-Benchmarking scripts to measure boot time of SGX frameworks: Occlum and Ego.
+This repo serves benchmarking scripts to measure the boot time of SGX frameworks: Occlum and Ego.
 Follow the Environment setup below before running the benchmark test.
 
-## Environment - Taken from [Occlum](https://occlum.readthedocs.io/en/latest/quickstart.html)
+## Environment
 
 I used an Azure Confidential Computing Machine - a simple Standard_DC1s_v2 Linux, Ubtuntu 20.04, Intel SGX (x86)
 You can follow this [guide](https://learn.microsoft.com/en-us/azure/confidential-computing/quick-create-marketplace).
@@ -18,7 +18,7 @@ Alternatively, you can follow the Quick start guide from either [Occlum](https:/
 
 ## Run benchmark
 
-The benchmarking test is to simply measure the boot time of a hello world binary executed within an enclave for each framework over 10 iterations. 
+This benchmarking test is designed to simply measure the boot time of a hello world binary executed within an enclave for each framework. The test is done over 10 iterations for each framework. 
 
 ### Occlum test
 
@@ -28,7 +28,7 @@ The benchmarking test is to simply measure the boot time of a hello world binary
 2. Run test script 
 `./occlum_run_bench_mark.sh`
 
-Expect the results of the test to be dispalyed on the terminal or viewed in a "results.txt" file. 
+Expect the results of the test to be logged to the terminal or they can be viewed in a "results.txt" file. 
 
 eg.
 ```bash
