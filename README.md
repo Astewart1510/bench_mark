@@ -1,6 +1,7 @@
-# Bench Marking
-Bench marking scripts to measure boot time of SGX frameworks: Occlum and Ego.
-Follow the Environment setup below before running the bench mark test.
+# BenchMarking
+
+Benchmarking scripts to measure boot time of SGX frameworks: Occlum and Ego.
+Follow the Environment setup below before running the benchmark test.
 
 ## Environment - Taken from [Occlum](https://occlum.readthedocs.io/en/latest/quickstart.html)
 
@@ -15,9 +16,9 @@ Alternatively, you can follow the Quick start guide from either [Occlum](https:/
 - Intel SGX enabled machine
 - Docker
 
-## Run Bench Mark
+## Run benchmark
 
-The bench marking test is to simply measure the boot time of a hello world binary executed within an enclave for each framework over 10 iterations. 
+The benchmarking test is to simply measure the boot time of a hello world binary executed within an enclave for each framework over 10 iterations. 
 
 ### Occlum test
 
