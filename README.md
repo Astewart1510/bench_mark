@@ -85,11 +85,11 @@ In Occlum, memory allocation is static. For our benchmarks, I set:
 user_space_size: 300MB
 default_heap_size: 256MB
 ```
-These settings in Occlum.json define the total user space and default heap size for processes.
+These settings in `Occlum.json` define the total user space and default heap size for processes.
 
 ### EGo Configuration
 
-EGo dynamically manages memory. I aligned its heap size with Occlum by setting heapSize to 256MB in enclave.json.
+EGo dynamically manages memory. I aligned its heap size with Occlum by setting heapSize to `256MB` in `enclave.json`.
 
 ### Benchmarking Approach
 
