@@ -19,7 +19,7 @@ occlum build
 
 # Prepare a file to store results.txt
 RESULTS_FILE="/home/results.txt"
-echo "Boot Time Results for running 10 Hello World binaries.." > $RESULTS_FILE
+echo "Boot Time Results for running 10 Hello World binaries in Occlum enclave.." > $RESULTS_FILE
 echo "" >> $RESULTS_FILE
 
 # Run the program multiple times and measure boot time

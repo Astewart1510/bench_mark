@@ -28,23 +28,69 @@ This benchmarking test is designed to simply measure the boot time of a hello wo
 2. Run test script 
 `./occlum_run_bench_mark.sh`
 
+
 Expect the results of the test to be logged to the terminal or they can be viewed in a "results.txt" file. 
 
 eg.
 ```bash
-Boot Time Results for running 10 Hello World binaries..
+Boot Time Results for running 10 Hello World binaries in Occlum enclave..
 
-1 2.860983086
-2 2.244129000
-3 2.199010215
-4 2.197258127
-5 2.306564250
-6 2.376046991
-7 2.368860547
-8 2.361805866
-9 2.297390455
-10 2.216734941
+1 2.370507250
+2 2.192411428
+3 2.190091903
+4 2.161669690
+5 2.159550050
+6 2.156466418
+7 2.208925764
+8 2.180626320
+9 2.153037844
+10 2.230094036
 
-Average boot time: 2.34288000000000000000 seconds
+Average boot time: 2.20034000000000000000 seconds
 ```
 
+### Ego test
+
+1. Navigate to occlum directory
+`cd ego`
+
+2. Run test script 
+`./ego_run_bench_mark.sh`
+
+eg.
+```bash
+Boot Time Results for running 10 Hello World binaries in EGo enclave..
+
+1 2.098878703
+2 2.067205426
+3 2.105139744
+4 2.104138933
+5 2.049242979
+6 2.097399793
+7 2.111776959
+8 2.117838413
+9 2.077859055
+10 2.116631498
+
+Average boot time: 2.09461000000000000000 seconds
+```
+
+
+## Memory Allocation: Occlum vs. EGo
+
+### Occlum Configuration
+
+In Occlum, memory allocation is static. For our benchmarks, I set:
+```
+user_space_size: 300MB
+default_heap_size: 256MB
+```
+These settings in Occlum.json define the total user space and default heap size for processes.
+
+### EGo Configuration
+
+EGo dynamically manages memory. I aligned its heap size with Occlum by setting heapSize to 256MB in enclave.json.
+
+### Benchmarking Approach
+
+To ensure fair comparison, both frameworks were configured with a 256MB heap size. This alignment focuses the benchmark on performance under similar memory constraints.
