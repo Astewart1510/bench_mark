@@ -1,0 +1,14 @@
+Boot Time Results for running 10 HelloWorld quoting binaries in Occlum enclave..
+
+1: 2.308699681 seconds
+2: 2.028089728 seconds
+3: 2.053294197 seconds
+4: 2.104692841 seconds
+5: 2.094853037 seconds
+6: 2.142931115 seconds
+7: 3.774087722 seconds
+8: 2.032194642 seconds
+9: 2.022724360 seconds
+10: 2.033263073 seconds
+
+Average boot time: 2.259 seconds
