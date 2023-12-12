@@ -54,6 +54,7 @@ Average boot time: 2.20034000000000000000 seconds
 ```
 Sample terminal log from executable binary. 
 ```
+quote size = 4600
 DCAP generate quote successfully
 {
   "Type": 3,
@@ -93,20 +94,24 @@ Average boot time: 2.09461000000000000000 seconds
 ```
 Sample terminal log from the executable binary.
 ```
-Boot Time Results for running 10 Hello World binaries in EGo enclave..
-
-1 2.211892686
-2 2.145963028
-3 2.112940361
-4 2.114163674
-5 2.086503877
-6 2.138252758
-7 2.098410551
-8 2.126699655
-9 2.132843420
-10 2.106499236
-
-Average boot time: 2.12742000000000000000 seconds
+EGo v1.4.0 (7af5647641a966a762c025b0389b7995f5e53062)
+[erthost] loading enclave ...
+[erthost] entering enclave ...
+[ego] starting application ...
+quote size = 4616
+DCAP generate quote successfully
+{
+  "Type": 3,
+  "Attributes": 0,
+  "MrEnclaveHex": "96EE199DBA986FB14CC9AFFA00000000",
+  "MrSignerHex": "F79C4CA9940A0DB3957F060783C12521",
+  "ProductIdHex": "03000200000000000A000F00939A7233",
+  "SecurityVersion": 1,
+  "Attributes": 0,
+  "EnclaveHeldDataHex": "4C8068D396095D3B1E2260E6BF813BD8CE5DEDB92921A7AF06EC8915AC59F3F8"
+}
+Cleaning up generated files...
+Cleanup completed.
 ```
 ### Gramine test
 
