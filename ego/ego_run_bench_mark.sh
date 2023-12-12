@@ -26,8 +26,8 @@ ego-go build main.go
 ego sign main
 
 # Prepare a file to store results
-RESULTS_FILE="./results.txt"
-echo "Boot Time Results for running 10 Hello World binaries in EGo enclave.." > $RESULTS_FILE
+RESULTS_FILE="./ego_results.txt"
+echo "Boot Time Results for running 10 HelloWorld quoting binaries in EGo enclave.." > $RESULTS_FILE
 echo "" >> $RESULTS_FILE
 
 # Run the program multiple times and measure boot time
@@ -50,4 +50,4 @@ echo "Average boot time: $average_time seconds" >> $RESULTS_FILE
 cleanup_files
 
 # Display results
-cat "./results.txt"
+cat "./ego_results.txt"
