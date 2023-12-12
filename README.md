@@ -52,7 +52,20 @@ Boot Time Results for running 10 Hello World quoting binaries in Occlum enclave.
 
 Average boot time: 2.20034000000000000000 seconds
 ```
-
+Sample terminal log from executable binary. 
+```
+DCAP generate quote successfully
+{
+  "Type": 3,
+  "Attributes": 7,
+  "MrEnclaveHex": "C31CB24487E2AC394DA9F5388F2CBC4E895AE1350D9A845806B663E5830B6B49",
+  "MrSignerHex": "83D719E77DEACA1470F6BAF62A4D774303C899DB69020F9C70EE1DFC08C7CE9E",
+  "ProductIdHex": "00000000000000000000000000000000",
+  "SecurityVersion": 0,
+  "Attributes": 7,
+  "EnclaveHeldDataHex": "010203040506"
+}
+```
 ### Ego test
 
 1. Navigate to occlum directory
@@ -77,6 +90,23 @@ Boot Time Results for running 10 Hello World quoting binaries in EGo enclave..
 10 2.116631498
 
 Average boot time: 2.09461000000000000000 seconds
+```
+Sample terminal log from the executable binary.
+```
+Boot Time Results for running 10 Hello World binaries in EGo enclave..
+
+1 2.211892686
+2 2.145963028
+3 2.112940361
+4 2.114163674
+5 2.086503877
+6 2.138252758
+7 2.098410551
+8 2.126699655
+9 2.132843420
+10 2.106499236
+
+Average boot time: 2.12742000000000000000 seconds
 ```
 ### Gramine test
 
@@ -104,7 +134,26 @@ Iteration | Build & Enclave Boot Time (seconds) | Enclave Boot Time (seconds)
 
 Average | .91955877120000000000 | .52415568690000000000
 ```
+Sample terminal log from the executable binary.
+```
+Gramine is starting. Parsing TOML manifest file, this may take some time...
+-----------------------------------------------------------------------------------------------------------------------
+Gramine detected the following insecure configurations:
 
+  - sgx.debug = true                           (this is a debug enclave)
+
+Gramine will continue application execution, but this configuration must not be used in production!
+-----------------------------------------------------------------------------------------------------------------------
+
+/dev/attestation/quote exists and is readable
+ATTRIBUTES.FLAGS: 07
+ATTRIBUTES.XFRM: 0700000000000000
+MRENCLAVE: 37cc5babda8ee16b296fa4e71aa23e529c5ac5c5a073f341556224cfe6994f05
+MRSIGNER: d312b93d55e5992d5e78edaff9df7a66b9eb4a47a250cc42bed6dc10a123034d
+ISVPRODID: 0000
+ISVSVN: 0000
+REPORTDATA: 736f6d652d64756d6d792d646174610000000000000000000000000000000000
+```
 
 ## Memory Allocation: Occlum vs. EGo
 
